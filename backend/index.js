@@ -34,14 +34,14 @@ function generateUniqueVerificationToken() {
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'naseefnaseefvkd2@gmail.com', 
-    pass: 'qyzy isyk ynnr wyyd', 
+    user: 'YOUR EMAIL ADDRESS', 
+    pass: 'YOUR SECRET PASSWORD', 
   },
 });
 
 function sendVerificationEmail(toEmail, verificationLink) {
   const mailOptions = {
-    from: 'naseefnaseefvkd2@gmail.com',
+    from: 'YOUR EMAIL ADDRESS',
     to: toEmail,
     subject: 'Email Verification',
     html: `<p>You have created an account in Edumetrix.<br> Click the following link to verify your email address:</p><p><a href="${verificationLink}">${verificationLink}</a></p>`
